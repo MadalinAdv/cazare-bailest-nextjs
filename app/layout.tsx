@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { Inter } from 'next/font/google';
 import "./globals.css";
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -80,6 +81,9 @@ export default function RootLayout({
         </footer>
 
         {/* Custom JS */}
+        <Script src="https://third-party-script.js"></Script>
+        <script src="https://third-party-script.js" async />
+<script src="https://third-party-script.js" defer />
         <script src="/assets/js/custom.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
       </body>
