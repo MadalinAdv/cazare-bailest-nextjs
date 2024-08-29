@@ -28,16 +28,23 @@ const QueenPage = () => {
            <br/>
            <br/>
             <main>
-                <div class="gallery" id="lightgallery">
-                    <a href="assets/images/camera-2.jpg">
-                        <img src="assets/images/camera-2.jpg" alt="" />
+                <div className="gallery" id="lightgallery">
+                    <a href="assets/images/buget.jpg">
+                        <img src="assets/images/buget.jpg" alt="" />
                     </a>
-                    <a href="assets/images/queen-baie-2.jpg">
-                        <img src="assets/images/queen-baie-2.jpg" alt="" />
+                    <a href="assets/images/buget2.jpg">
+                        <img src="assets/images/buget2.jpg" alt="" />
                     </a>
-                    <a href="assets/images/queen-baie-1.jpg">
-                        <img src="assets/images/queen-baie-1.jpg" alt="" />
+                    <a href="assets/images/buget3.jpg">
+                        <img src="assets/images/buget3.jpg" alt="" />
                     </a>
+                    <a href="assets/images/buget4.jpg">
+                        <img src="assets/images/buget4.jpg" alt="" />
+                    </a>
+                    <a href="assets/images/buget5.jpg">
+                        <img src="assets/images/buget5.jpg" alt="" />
+                    </a>
+                    
                 </div>
             </main>
         </div>
