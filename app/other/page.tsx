@@ -10,15 +10,18 @@ import 'lightgallery/css/lg-zoom.css';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
-const QueenPage = () => {
+const OtherPage = () => {
     useEffect(() => {
-        // Verificăm dacă documentul este disponibil
         if (typeof window !== 'undefined') {
-            // Inițializează lightGallery cu pluginurile
-            lightGallery(document.getElementById('lightgallery'), {
-                plugins: [lgThumbnail, lgZoom],
-                speed: 500,
-            });
+            const galleryElement = document.getElementById('lightgallery');
+            
+            // Verificăm dacă elementul există
+            if (galleryElement) {
+                lightGallery(galleryElement, {
+                    plugins: [lgThumbnail, lgZoom],
+                    speed: 500,
+                });
+            }
         }
     }, []);
 
@@ -63,4 +66,4 @@ const QueenPage = () => {
     );
 };
 
-export default QueenPage;
+export default OtherPage;

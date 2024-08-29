@@ -12,13 +12,16 @@ import lgZoom from 'lightgallery/plugins/zoom';
 
 const QueenPage = () => {
     useEffect(() => {
-        // Verificăm dacă documentul este disponibil
         if (typeof window !== 'undefined') {
-            // Inițializează lightGallery cu pluginurile
-            lightGallery(document.getElementById('lightgallery'), {
-                plugins: [lgThumbnail, lgZoom],
-                speed: 500,
-            });
+            const galleryElement = document.getElementById('lightgallery');
+            
+            // Verificăm dacă elementul există
+            if (galleryElement) {
+                lightGallery(galleryElement, {
+                    plugins: [lgThumbnail, lgZoom],
+                    speed: 500,
+                });
+            }
         }
     }, []);
 
@@ -28,7 +31,7 @@ const QueenPage = () => {
            <br/>
            <br/>
             <main>
-                <div class="gallery" id="lightgallery">
+                <div className="gallery" id="lightgallery">
                     <a href="assets/images/camera-2.jpg">
                         <img src="assets/images/camera-2.jpg" alt="" />
                     </a>
