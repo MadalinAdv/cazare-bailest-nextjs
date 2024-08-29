@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import Script from 'next/script'
 export default function Home() {
   return (
     <>
       <section className="home">
+      <Script src="https://third-party-script.js"></Script>
         <div className="home-text">
           <h5>Let's</h5>
           <h1>Choose your <br />own camera</h1>
