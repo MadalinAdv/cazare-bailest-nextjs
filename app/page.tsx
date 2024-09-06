@@ -10,7 +10,7 @@ export default function Home() {
 
       <section className="home">
         <div className="home-text">
-          <h5>Let&apos;s test</h5>
+          <h5>Let&apos;s</h5>
           <h1>Choose your <br />own camera</h1>
           <p>
             Alege-ți una dintre camerele noastre, avem o diversitate destul de mare
