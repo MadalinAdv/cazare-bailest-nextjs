@@ -1,9 +1,8 @@
 "use client";
 import Head from 'next/head';
-import { useEffect } from 'react';
 import { Inter } from 'next/font/google';
 import "./globals.css";
-import Script from 'next/script'
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,8 +11,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
- 
-
   return (
     <html lang="en">
       <Head>
@@ -52,12 +49,12 @@ export default function RootLayout({
           </ul>
 
           <div className="h-right">
-              {/* <a href=""><i className="ri-instagram-fill"></i></a>
+            {/* <a href=""><i className="ri-instagram-fill"></i></a>
             <a href="" target="_blank"><i className="ri-facebook-fill"></i></a>
             <a href=""><i className="ri-bookmark-fill"></i></a> */}
           </div>
         </header>
-    
+
         {children}
 
         <div className="wapp">
@@ -80,12 +77,10 @@ export default function RootLayout({
           </div>
         </footer>
 
-        {/* Custom JS */}
-        <Script src="https://third-party-script.js"></Script>
-        <script src="https://third-party-script.js" async />
-<script src="https://third-party-script.js" defer />
-        <script src="/assets/js/custom.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+        {/* Custom JS and external scripts loaded asynchronously */}
+        <Script src="https://third-party-script.js" strategy="lazyOnload" />
+        <Script src="/assets/js/custom.js" strategy="lazyOnload" />
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js" strategy="lazyOnload" />
       </body>
     </html>
   );
