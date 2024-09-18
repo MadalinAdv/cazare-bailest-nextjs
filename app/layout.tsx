@@ -18,6 +18,8 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          {/* Favicon */}
+        <link rel="icon" type="image/png" href="assets/images/favicon.png" />
         <meta name="description" content="Cazare confortabilă în Băilești. Camere spațioase cu paturi king size, acces gratuit la Wi-Fi și multe alte facilități. Rezervă acum la prețuri avantajoase!" />
         <meta name="keywords" content="cazare băilești, camere băilești, hotel băilești, pensiune băilești" />
         <meta name="author" content="Madalin" />
@@ -28,8 +30,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://cazarebailesti.ro" />
         <meta property="og:image" content="assets/images/deluxe1.jpg" />
 
-        {/* Favicon */}
-        <link rel="icon" type="image/webp" href="assets/images/favicon.webp" />
+      
 
 
         {/* Custom CSS */}
