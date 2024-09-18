@@ -12,75 +12,48 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="ro">
       <Head>
-        <title>Cazare Bailesti</title>
+        <title>Cazare Premium în Băilești - Camere Confortabile de la 199 RON</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="Cazare Bailesti" />
-        <meta name="keywords" content="cazare bailesti, pensiune bailesti, hotel bailesti, bailesti, bailesti cazare, bailesti evenimente" />
+        <meta name="description" content="Cazare confortabilă în Băilești. Camere spațioase cu paturi king size, acces gratuit la Wi-Fi și multe alte facilități. Rezervă acum la prețuri avantajoase!" />
+        <meta name="keywords" content="cazare băilești, camere băilești, hotel băilești, pensiune băilești" />
         <meta name="author" content="Madalin" />
+
+        {/* Open Graph Metadata */}
+        <meta property="og:title" content="Cazare Premium în Băilești - Camere Confortabile" />
+        <meta property="og:description" content="Camere spațioase și curate, perfecte pentru un sejur relaxant în Băilești. Rezervă acum la prețuri începând de la 159 RON/noapte." />
+        <meta property="og:url" content="https://cazarebailesti.ro" />
+        <meta property="og:image" content="assets/images/deluxe1.jpg" />
+
+        {/* Favicon */}
+        <link rel="icon" type="image/webp" href="assets/images/favicon.webp" />
+
 
         {/* Custom CSS */}
         <link rel="stylesheet" href="/assets/css/style.css" />
-
-        {/* Boxicons */}
-        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
-
-        {/* Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
-        {/* LightGallery CSS */}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
       </Head>
       <body className={inter.className}>
         <header>
-          <a href="/" className="logo">CAZARE<span>Bailesti</span></a>
-
-          <ul className="navbar">
-            {/* 
-            <li><a href="#home"></a>Home</li>
-            <li><a href="#room"></a>Rooms</li>
-            <li><a href="#contact"></a>Contact</li> */}
-          </ul>
-
-          <div className="h-right">
-            {/* <a href=""><i className="ri-instagram-fill"></i></a>
-            <a href="" target="_blank"><i className="ri-facebook-fill"></i></a>
-            <a href=""><i className="ri-bookmark-fill"></i></a> */}
-          </div>
+          <a href="/" className="logo">CAZARE<span>Băilești</span></a>
+          {/* Conținutul header-ului */}
         </header>
 
         {children}
 
-        <div className="wapp">
-          <a aria-label="Chat on WhatsApp" href="https://wa.me/40722465185">
-            <img alt="Chat on WhatsApp" src="/assets/images/wicon.png" />
-          </a>
-        </div>
-
-        <div className="mail">
-          <a href="mailto:office@cazarebailesti.ro">
-            <img alt="Mail" src="/assets/images/mailu.png" />
-          </a>
-        </div>
-
         <footer>
           <div className="copyright">
             <p>
-              copyright 2024 by <a href="https://madalindvp.ro/" target="_blank">madalin.dvp</a>
+              Copyright 2024 by <a href="https://madalindvp.ro/" target="_blank">madalin.dvp</a>
             </p>
           </div>
         </footer>
 
-        {/* Custom JS and external scripts loaded asynchronously */}
-        <Script src="https://third-party-script.js" strategy="lazyOnload" />
-        <Script src="/assets/js/custom.js" strategy="lazyOnload" />
+        {/* Scripturi externe */}
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js" strategy="lazyOnload" />
+        <Script src="/assets/js/custom.js" strategy="lazyOnload" />
       </body>
     </html>
   );
