@@ -61,9 +61,7 @@ export default function RootLayout({
         <meta property="og:image" content={metadata.openGraph.images[0].url} />
         <meta property="og:locale" content={metadata.openGraph.locale} />
 
-        {/* Favicon */}
-        <link rel="icon" type="image/png" href={metadata.icons.icon} />
-        <link rel="shortcut icon" href={metadata.icons.shortcut} />
+      
 
         {/* Custom CSS */}
         <link rel="stylesheet" href="/assets/css/style.css" />
