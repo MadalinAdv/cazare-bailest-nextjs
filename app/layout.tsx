@@ -1,10 +1,42 @@
-"use client";
+
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import "./globals.css";
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata = {
+  title: 'Cazare Premium în Băilești - Camere Confortabile de la 199 RON',
+  description: 'Cazare confortabilă în Băilești. Camere spațioase cu paturi king size, acces gratuit la Wi-Fi și multe alte facilități. Rezervă acum la prețuri avantajoase!',
+  keywords: [
+    'cazare băilești',
+    'camere băilești',
+    'hotel băilești',
+    'pensiune băilești',
+    'cazare confortabilă',
+    'băilești hotel'
+  ],
+  authors: [{ name: 'Mădălin D.', url: 'https://madalindvp.ro' }],
+  openGraph: {
+    description: 'Camere spațioase și curate, perfecte pentru un sejur relaxant în Băilești. Rezervă acum la prețuri începând de la 159 RON/noapte.',
+    url: 'https://cazarebailesti.ro',
+    siteName: 'Cazare Băilești',
+    images: [
+      {
+        url: '/assets/images/deluxe1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Cazare Premium Băilești - Vedere din cameră',
+      },
+    ],
+    locale: 'ro_RO',
+  },
+  icons: {
+    icon: '/assets/images/favicon.png',
+    shortcut: '/assets/images/favicon.png',
+  },
+};
 
 export default function RootLayout({
   children,
@@ -14,24 +46,24 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <Head>
-        <title>Cazare Premium în Băilești - Camere Confortabile de la 199 RON</title>
+        <title>{metadata.title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          {/* Favicon */}
-        <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-        <meta name="description" content="Cazare confortabilă în Băilești. Camere spațioase cu paturi king size, acces gratuit la Wi-Fi și multe alte facilități. Rezervă acum la prețuri avantajoase!" />
-        <meta name="keywords" content="cazare băilești, camere băilești, hotel băilești, pensiune băilești" />
-        <meta name="author" content="Madalin" />
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(', ')} />
+        <meta name="author" content={metadata.authors[0].name} />
 
         {/* Open Graph Metadata */}
-        <meta property="og:title" content="Cazare Premium în Băilești - Camere Confortabile" />
-        <meta property="og:description" content="Camere spațioase și curate, perfecte pentru un sejur relaxant în Băilești. Rezervă acum la prețuri începând de la 159 RON/noapte." />
-        <meta property="og:url" content="https://cazarebailesti.ro" />
-        <meta property="og:image" content="assets/images/deluxe1.jpg" />
+        <meta property="og:title" content={metadata.openGraph.siteName} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:locale" content={metadata.openGraph.locale} />
 
-      
-
+        {/* Favicon */}
+        <link rel="icon" type="image/png" href={metadata.icons.icon} />
+        <link rel="shortcut icon" href={metadata.icons.shortcut} />
 
         {/* Custom CSS */}
         <link rel="stylesheet" href="/assets/css/style.css" />
@@ -39,7 +71,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <header>
           <a href="/" className="logo">CAZARE<span>Băilești</span></a>
-          {/* Conținutul header-ului */}
         </header>
 
         {children}
