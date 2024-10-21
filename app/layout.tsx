@@ -3,11 +3,12 @@ import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import "./globals.css";
 import Script from 'next/script';
+import Button from '@/components/Button';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Cazare Premium în Băilești - Camere Confortabile de la 199 RON',
+  title: 'Cazare Premium în Băilești - Camere Confortabile de la 159 RON',
   description: 'Cazare confortabilă în Băilești. Camere spațioase cu paturi king size, acces gratuit la Wi-Fi și multe alte facilități. Rezervă acum la prețuri avantajoase!',
   keywords: [
     'cazare băilești',
@@ -15,7 +16,9 @@ export const metadata = {
     'hotel băilești',
     'pensiune băilești',
     'cazare confortabilă',
-    'băilești hotel'
+    'băilești hotel',
+    'cazare bailesti', 
+    'bailesti'
   ],
   authors: [{ name: 'Mădălin D.', url: 'https://madalindvp.ro' }],
   openGraph: {
@@ -73,6 +76,7 @@ export default function RootLayout({
 
         {children}
 
+        <Button />  
         <footer>
           <div className="copyright">
             <p>
